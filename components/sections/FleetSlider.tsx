@@ -7,33 +7,33 @@ import { ArrowUpRight, Shield, Zap, Globe } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 export const FleetSlider = () => {
-  const t = useTranslations("Navigation");
+  const t = useTranslations("Index.fleet");
 
   const fleetItems = [
     { 
-      title: "Heavy Duty Transporters", 
-      category: "Land Freight", 
+      title: t("items.0.title"), 
+      category: t("items.0.category"), 
       img: "/fleet_truck.png",
       stats: ["40T Capacity", "Euro 6 Tech"],
       icon: Zap
     },
     { 
-      title: "Smart Warehousing", 
-      category: "Storage", 
+      title: t("items.1.title"), 
+      category: t("items.1.category"), 
       img: "/fleet_warehouse.png",
       stats: ["Automated", "24/7 Security"],
       icon: Shield
     },
     { 
-      title: "Global Shipping Lines", 
-      category: "Sea Freight", 
+      title: t("items.2.title"), 
+      category: t("items.2.category"), 
       img: "/fleet_ship.png",
       stats: ["Worldwide", "Port Logistics"],
       icon: Globe
     },
     { 
-      title: "Last Mile Delivery", 
-      category: "Local Distribution", 
+      title: t("items.3.title"), 
+      category: t("items.3.category"), 
       img: "/fleet_van.png",
       stats: ["Urban Experts", "Fast Dispatch"],
       icon: Zap
@@ -59,7 +59,7 @@ export const FleetSlider = () => {
             >
               <div className="h-[1px] w-8 bg-blue-600" />
               <span className="text-blue-600 dark:text-blue-500 font-bold tracking-[0.4em] uppercase text-[10px]">
-                Global Asset Network
+                {t("tag")}
               </span>
             </motion.div>
             
@@ -69,7 +69,7 @@ export const FleetSlider = () => {
               viewport={{ once: true }}
               className="text-5xl md:text-7xl font-bold font-outfit text-gray-900 dark:text-white tracking-tighter leading-none"
             >
-              Our Elite <span className="text-blue-600">Fleet.</span>
+              {t("title")} <span className="text-blue-600">{t("subtitle")}</span>
             </motion.h2>
           </div>
           
@@ -78,7 +78,7 @@ export const FleetSlider = () => {
             whileInView={{ opacity: 1 }}
             className="text-gray-500 dark:text-gray-400 text-lg md:text-xl font-light max-w-sm border-l border-gray-100 dark:border-white/10 pl-8 mb-4"
           >
-            A high-performance infrastructure designed for uncompromising reliability.
+            {t("desc")}
           </motion.p>
         </div>
 

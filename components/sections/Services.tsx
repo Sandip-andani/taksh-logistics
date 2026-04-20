@@ -13,7 +13,7 @@ export const Services = () => {
     {
       title: t("container"),
       icon: Package,
-      desc: "Precision container management with real-time transit intelligence.",
+      desc: t("containerDesc"),
       size: "col-span-1 md:col-span-2",
       img: "/fleet_ship.png",
       color: "blue"
@@ -21,7 +21,7 @@ export const Services = () => {
     {
       title: t("freight"),
       icon: Truck,
-      desc: "Agile land and air solutions for time-sensitive cargo.",
+      desc: t("freightDesc"),
       size: "col-span-1 md:col-span-1",
       img: "/fleet_truck.png",
       color: "indigo"
@@ -29,7 +29,7 @@ export const Services = () => {
     {
       title: t("warehousing"),
       icon: Warehouse,
-      desc: "Smart, automated storage for the modern supply chain.",
+      desc: t("warehouseDesc"),
       size: "col-span-1 md:col-span-1",
       img: "/fleet_warehouse.png",
       color: "cyan"
@@ -37,7 +37,7 @@ export const Services = () => {
     {
       title: t("fleet"),
       icon: ShieldCheck,
-      desc: "Uncompromising security and asset management for your entire portfolio.",
+      desc: t("fleetDesc"),
       size: "col-span-1 md:col-span-2",
       img: "/fleet_van.png",
       color: "blue"
@@ -58,7 +58,7 @@ export const Services = () => {
             >
               <div className="h-[2px] w-12 bg-blue-600" />
               <span className="text-blue-600 font-bold tracking-[0.3em] uppercase text-[10px]">
-                Excellence in Motion
+                {t("mainTag")}
               </span>
             </motion.div>
             <motion.h2 
@@ -66,7 +66,7 @@ export const Services = () => {
               whileInView={{ opacity: 1, y: 0 }}
               className="text-5xl md:text-7xl font-bold font-outfit tracking-tighter leading-[0.9] text-gray-900 dark:text-white"
             >
-              Logistics Solutions <br /> <span className="text-blue-600">Redefined.</span>
+              {t("mainTitle")} <br /> <span className="text-blue-600">{t("mainSubtitle")}</span>
             </motion.h2>
           </div>
           <motion.p 
@@ -74,7 +74,7 @@ export const Services = () => {
             whileInView={{ opacity: 1 }}
             className="text-gray-500 dark:text-gray-400 text-lg md:text-xl font-light leading-relaxed max-w-sm lg:mb-2 border-l border-gray-200 dark:border-white/10 pl-8"
           >
-            We blend cutting-edge technology with decades of expertise to move your business forward.
+            {t("mainDesc")}
           </motion.p>
         </div>
 
@@ -113,7 +113,7 @@ export const Services = () => {
                 </div>
 
                 <div className="flex items-center gap-2 text-blue-600 font-bold text-xs uppercase tracking-widest opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-500">
-                  <span>Learn More</span>
+                  <span>{t("learnMore")}</span>
                   <ArrowRight className="h-4 w-4" />
                 </div>
               </div>

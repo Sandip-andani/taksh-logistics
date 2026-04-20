@@ -17,7 +17,8 @@
         }
       ],
       "ctaQuote": "Get Quote",
-      "ctaTrack": "Track Shipment"
+      "ctaTrack": "Track Shipment",
+      "badge": "Global Logistics Excellence"
     },
     "stats": {
       "deliveries": "10K+ Deliveries",
@@ -27,29 +28,118 @@
     "services": {
       "title": "Our Premium Services",
       "container": "Container Transport",
+      "containerDesc": "Precision container management with real-time transit intelligence.",
       "freight": "Freight Forwarding",
+      "freightDesc": "Agile land and air solutions for time-sensitive cargo.",
       "warehousing": "Warehousing",
-      "fleet": "Fleet Management"
+      "warehouseDesc": "Smart, automated storage for the modern supply chain.",
+      "fleet": "Fleet Management",
+      "fleetDesc": "Uncompromising security and asset management for your entire portfolio.",
+      "tag": "Expertise",
+      "learnMore": "Learn More",
+      "mainTag": "Excellence in Motion",
+      "mainTitle": "Logistics Solutions",
+      "mainSubtitle": "Redefined.",
+      "mainDesc": "We blend cutting-edge technology with decades of expertise to move your business forward."
+    },
+    "fleet": {
+      "tag": "Global Asset Network",
+      "title": "Our Elite",
+      "subtitle": "Fleet.",
+      "desc": "A high-performance infrastructure designed for uncompromising reliability.",
+      "items": [
+        { "title": "Heavy Duty Transporters", "category": "Land Freight" },
+        { "title": "Smart Warehousing", "category": "Storage" },
+        { "title": "Global Shipping Lines", "category": "Sea Freight" },
+        { "title": "Last Mile Delivery", "category": "Local Distribution" }
+      ]
     },
     "loader": {
-      "text": "Moving Your World..."
+      "text": "Moving Your World...",
+      "status": "Global Nexus Operational"
     },
     "about": {
-      "tag": "Our Legacy",
-      "title": "Pioneering Logistics with Precision & Passion",
-      "desc": "Founded on the principles of reliability and innovation, Taksh Logistics has grown from a local transport provider to a global logistics powerhouse."
+      "tag": "Our Legacy & Future",
+      "title": "Pioneering Logistics.",
+      "desc": "Founded on the principles of reliability and innovation, Taksh Logistics has grown from a local transport provider to a global logistics powerhouse.",
+      "reliability": "Reliability",
+      "network": "Network",
+      "success": "Success Rate",
+      "hubs": "Global Hubs",
+      "excellence": "Years of Global Excellence"
     },
     "process": {
       "title": "Our Seamless Process",
-      "subtitle": "How We Work"
+      "subtitle": "How We Work",
+      "desc": "We've refined the complexities of global logistics into a transparent, four-step journey that guarantees safety and speed.",
+      "steps": [
+        {
+          "title": "Strategy & Planning",
+          "desc": "Custom logistics roadmap tailored to your specific trade requirements."
+        },
+        {
+          "title": "Consolidation",
+          "desc": "Expert handling and safe loading of your premium container cargo."
+        },
+        {
+          "title": "Global Transit",
+          "desc": "Optimized sea and land routes with 24/7 real-time GPS monitoring."
+        },
+        {
+          "title": "Final Delivery",
+          "desc": "Last-mile excellence ensuring your goods reach the destination safely."
+        }
+      ]
     },
     "network": {
-      "tag": "Worldwide Reach",
-      "title": "Connecting Every Corner of the Globe"
+      "tag": "Global Command Center",
+      "title": "Strategic Infrastructure.",
+      "status": "HQ Live & Active",
+      "statusLabel": "Network Status",
+      "hq": "Global Headquarters",
+      "hqDesc": "Primary logistics hub managing global operations and coordinating over 1,200+ fleet movements daily.",
+      "reach": "Global Reach",
+      "ports": "Active Ports",
+      "uptime": "Uptime"
     },
     "cta": {
       "title": "Ready to Move Your World?",
-      "button": "Get Started Now"
+      "button": "Get Started Now",
+      "tag": "Ready to scale?",
+      "desc": "Join the elite network of global traders who trust Taksh Logistics for their most critical cargo movements.",
+      "global": "Global Coverage",
+      "secure": "Secure Transit"
+    },
+    "contact": {
+      "tag": "Global Support",
+      "title": "Let's Start a Conversation.",
+      "desc": "Our logistics experts are standing by 24/7 to help you navigate the complexities of global trade.",
+      "hq": "Global HQ",
+      "phone": "Direct Line",
+      "email": "Secure Email",
+      "live": "Live Support",
+      "responseTime": "Response Time",
+      "time": "Under 15 Minutes",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "emailLabel": "Email Address",
+      "message": "Your Message",
+      "send": "Send Message",
+      "placeholder": "Tell us about your logistics needs...",
+      "visit": "Visit Us",
+      "call": "Call Now",
+      "write": "Write Us"
+    },
+    "footer": {
+      "desc": "Pioneering the future of global logistics with cutting-edge technology and unparalleled service quality. Moving your world with precision.",
+      "nav": "Navigation",
+      "touch": "Get in Touch",
+      "updated": "Stay Updated",
+      "emailPlaceholder": "Email address",
+      "subscribe": "Subscribe",
+      "secure": "Secure Connection Guaranteed",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service"
     }
   },
   "Navigation": {
@@ -58,6 +148,9 @@
     "services": "Services",
     "fleet": "Fleet",
     "tracking": "Tracking",
-    "contact": "Contact"
+    "contact": "Contact",
+    "login": "Log in",
+    "quote": "Get Quote",
+    "selectRegion": "Select Region"
   }
 }

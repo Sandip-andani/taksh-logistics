@@ -1,14 +1,14 @@
 {
   "Index": {
-    "title": "Taksh 物流",
+    "title": "泰克什物流",
     "hero": {
       "slides": [
         {
           "headline": "助力全球集装箱贸易",
-          "subtext": "无缝的海运解决方案，以精准和速度连接各大洲。"
+          "subtext": "精准快速的海运解决方案，连接各大洲。"
         },
         {
-          "headline": "运动中的精准",
+          "headline": "行进中的精准",
           "subtext": "智能公路运输，为每批货物提供实时跟踪。"
         },
         {
@@ -17,10 +17,11 @@
         }
       ],
       "ctaQuote": "获取报价",
-      "ctaTrack": "追踪查询"
+      "ctaTrack": "货物查询",
+      "badge": "卓越全球物流"
     },
     "stats": {
-      "deliveries": "1万+ 交付",
+      "deliveries": "10K+ 交付",
       "clients": "500+ 客户",
       "support": "24/7 支持"
     },
@@ -29,27 +30,73 @@
       "container": "集装箱运输",
       "freight": "货运代理",
       "warehousing": "仓储服务",
-      "fleet": "车队管理"
+      "fleet": "车队管理",
+      "tag": "专业知识"
     },
     "loader": {
-      "text": "驱动您的世界..."
+      "text": "推动您的世界...",
+      "status": "全球枢纽运行中"
     },
     "about": {
-      "tag": "我们的传承",
-      "title": "以精准与激情引领物流",
-      "desc": "Taksh 物流基于可靠和创新的原则创立，已从一家当地运输供应商成长为全球物流巨头。"
+      "tag": "我们的传承与未来",
+      "title": "开拓物流先河。",
+      "desc": "泰克什物流基于可靠和创新的原则，已从本地运输商成长为全球物流巨头。",
+      "reliability": "可靠性",
+      "network": "网络",
+      "success": "成功率",
+      "hubs": "全球枢纽",
+      "excellence": "多年卓越全球服务"
     },
     "process": {
       "title": "我们的无缝流程",
-      "subtitle": "我们如何运作"
+      "subtitle": "我们的工作方式"
     },
     "network": {
-      "tag": "遍布全球",
-      "title": "连接世界的每一个角落"
+      "tag": "全球指挥中心",
+      "title": "战略基础设施。",
+      "status": "总部实时活跃",
+      "statusLabel": "网络状态",
+      "hq": "全球总部",
+      "hqDesc": "管理全球运营的主要物流枢纽，每天协调1,200多次车队行动。",
+      "reach": "全球覆盖",
+      "ports": "活跃港口",
+      "uptime": "运行时间"
     },
     "cta": {
-      "title": "准备好驱动您的世界了吗？",
-      "button": "立即开始"
+      "title": "准备好推动您的世界了吗？",
+      "button": "立即开始",
+      "tag": "准备好扩展了吗？"
+    },
+    "contact": {
+      "tag": "全球支持",
+      "title": "让我们开始对话。",
+      "desc": "我们的物流专家全天候待命，帮助您应对全球贸易的复杂挑战。",
+      "hq": "全球总部",
+      "phone": "直通热线",
+      "email": "安全邮箱",
+      "live": "在线支持",
+      "responseTime": "响应时间",
+      "time": "15分钟内",
+      "firstName": "名",
+      "lastName": "姓",
+      "emailLabel": "电子邮件",
+      "message": "您的消息",
+      "send": "发送消息",
+      "placeholder": "请告诉我们您的物流需求...",
+      "visit": "访问我们",
+      "call": "立即致电",
+      "write": "写信给我们"
+    },
+    "footer": {
+      "desc": "以尖端技术和卓越服务质量引领全球物流未来。精准推动您的世界。",
+      "nav": "导航",
+      "touch": "联系我们",
+      "updated": "保持关注",
+      "emailPlaceholder": "电子邮件地址",
+      "subscribe": "订阅",
+      "secure": "确保连接安全",
+      "privacy": "隐私政策",
+      "terms": "服务条款"
     }
   },
   "Navigation": {
@@ -57,7 +104,10 @@
     "about": "关于我们",
     "services": "服务项目",
     "fleet": "车队",
-    "tracking": "物流追踪",
-    "contact": "联系我们"
+    "tracking": "跟踪",
+    "contact": "联系",
+    "login": "登录",
+    "quote": "获取报价",
+    "selectRegion": "选择地区"
   }
 }

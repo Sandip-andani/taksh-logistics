@@ -3,13 +3,14 @@
 import React from "react";
 import { Link } from "@/navigation";
 import { useTranslations } from "next-intl";
-import { Mail, Phone, MapPin, ArrowUpRight } from "lucide-react";
+import { Phone, MapPin, ArrowUpRight } from "lucide-react";
 import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
 export const Footer = () => {
   const t = useTranslations("Navigation");
+  const tf = useTranslations("Index.footer");
 
   return (
     <footer className="bg-gray-50 dark:bg-[#050505] text-gray-600 dark:text-gray-400 py-24 border-t border-gray-200 dark:border-white/5 transition-colors duration-500">
@@ -18,11 +19,11 @@ export const Footer = () => {
           
           {/* Brand Identity */}
           <div className="lg:col-span-4">
-            <div className="text-2xl font-bold tracking-tighter font-outfit text-gray-900 dark:text-white mb-8">
+            <div className="text-2xl font-bold tracking-tighter font-outfit text-gray-900 dark:text-white mb-8 uppercase">
               TAKSH <span className="text-blue-600">LOGISTICS</span>
             </div>
             <p className="text-sm leading-relaxed mb-8 max-w-sm font-light">
-              Pioneering the future of global logistics with cutting-edge technology and unparalleled service quality. Moving your world with precision.
+              {tf("desc")}
             </p>
             <div className="flex space-x-4">
               {[FaFacebook, FaTwitter, FaLinkedin, FaInstagram].map((Icon, i) => (
@@ -39,7 +40,9 @@ export const Footer = () => {
 
           {/* Quick Links */}
           <div className="lg:col-span-2">
-            <h4 className="text-gray-900 dark:text-white font-bold mb-8 font-outfit uppercase tracking-widest text-[10px]">Navigation</h4>
+            <h4 className="text-gray-900 dark:text-white font-bold mb-8 font-outfit uppercase tracking-widest text-[10px]">
+              {tf("nav")}
+            </h4>
             <ul className="space-y-4">
               {["home", "about", "services", "fleet", "tracking", "contact"].map((key) => (
                 <li key={key}>
@@ -57,7 +60,9 @@ export const Footer = () => {
 
           {/* Global HQ Info */}
           <div className="lg:col-span-3">
-            <h4 className="text-gray-900 dark:text-white font-bold mb-8 font-outfit uppercase tracking-widest text-[10px]">Get in Touch</h4>
+            <h4 className="text-gray-900 dark:text-white font-bold mb-8 font-outfit uppercase tracking-widest text-[10px]">
+              {tf("touch")}
+            </h4>
             <ul className="space-y-6">
               <li className="flex items-start space-x-4">
                 <div className="h-10 w-10 rounded-xl bg-blue-600/5 dark:bg-blue-600/10 flex items-center justify-center text-blue-600 shrink-0">
@@ -79,19 +84,23 @@ export const Footer = () => {
 
           {/* Newsletter / CTA */}
           <div className="lg:col-span-3">
-            <h4 className="text-gray-900 dark:text-white font-bold mb-8 font-outfit uppercase tracking-widest text-[10px]">Stay Updated</h4>
+            <h4 className="text-gray-900 dark:text-white font-bold mb-8 font-outfit uppercase tracking-widest text-[10px]">
+              {tf("updated")}
+            </h4>
             <div className="p-1 rounded-2xl bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/5">
               <div className="flex flex-col space-y-3 p-2">
                 <Input 
-                  placeholder="Email address" 
+                  placeholder={tf("emailPlaceholder")} 
                   className="bg-transparent border-none text-gray-900 dark:text-white h-10 focus-visible:ring-0 placeholder:text-gray-400" 
                 />
                 <Button className="w-full bg-blue-600 hover:bg-blue-700 h-10 font-bold uppercase tracking-widest text-[9px] rounded-xl shadow-lg shadow-blue-600/20">
-                  Subscribe
+                  {tf("subscribe")}
                 </Button>
               </div>
             </div>
-            <p className="text-[10px] mt-4 text-gray-400 uppercase tracking-widest font-bold">Secure Connection Guaranteed</p>
+            <p className="text-[10px] mt-4 text-gray-400 uppercase tracking-widest font-bold">
+              {tf("secure")}
+            </p>
           </div>
         </div>
 
@@ -101,8 +110,8 @@ export const Footer = () => {
             © 2024 TAKSH LOGISTICS. ALL RIGHTS RESERVED.
           </p>
           <div className="flex space-x-8 text-[9px] font-bold tracking-[0.2em] uppercase">
-            <Link href="#" className="hover:text-blue-600 transition-colors">Privacy Policy</Link>
-            <Link href="#" className="hover:text-blue-600 transition-colors">Terms of Service</Link>
+            <Link href="#" className="hover:text-blue-600 transition-colors">{tf("privacy")}</Link>
+            <Link href="#" className="hover:text-blue-600 transition-colors">{tf("terms")}</Link>
           </div>
         </div>
       </div>

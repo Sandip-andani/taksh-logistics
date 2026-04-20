@@ -4,7 +4,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { motion, useInView, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import { ShieldCheck, Zap, Globe, Award } from "lucide-react";
+import { ShieldCheck, Globe, Award } from "lucide-react";
 
 const Counter = ({ value, duration = 2 }: { value: string; duration?: number }) => {
   const [count, setCount] = useState(0);
@@ -62,13 +62,15 @@ export const About = () => {
               <div className="flex items-center gap-3 mb-8">
                 <div className="h-[1px] w-12 bg-blue-600" />
                 <span className="text-blue-600 font-bold tracking-[0.4em] uppercase text-[10px]">
-                  Our Legacy & Future
+                  {t("tag")}
                 </span>
               </div>
               
               <h2 className="text-6xl md:text-8xl font-bold font-outfit tracking-tighter leading-[0.85] text-gray-900 dark:text-white mb-10">
-                Pioneering <br /> 
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-500">Logistics.</span>
+                {t("title").split(".")[0]} <br /> 
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-500">
+                  {t("title").split(".")[1]}.
+                </span>
               </h2>
 
               <p className="text-gray-500 dark:text-gray-400 text-lg md:text-xl font-light leading-relaxed mb-12 max-w-xl italic border-l-2 border-blue-600/10 pl-8">
@@ -78,8 +80,8 @@ export const About = () => {
               {/* High-End Feature Grid */}
               <div className="grid grid-cols-2 gap-8">
                 {[
-                  { icon: ShieldCheck, label: "Reliability", value: "99.9%", desc: "Success Rate" },
-                  { icon: Globe, label: "Network", value: "120+", desc: "Global Hubs" },
+                  { icon: ShieldCheck, label: t("reliability"), value: "99.9%", desc: t("success") },
+                  { icon: Globe, label: t("network"), value: "120+", desc: t("hubs") },
                 ].map((item, i) => (
                   <motion.div 
                     key={i}
@@ -131,7 +133,7 @@ export const About = () => {
                 </div>
                 <div className="text-7xl font-bold text-gray-900 dark:text-white font-outfit leading-none mb-2">15</div>
                 <div className="text-[10px] font-bold text-gray-400 uppercase tracking-[0.3em] leading-relaxed max-w-[120px]">
-                  Years of Global Excellence
+                  {t("excellence")}
                 </div>
               </div>
             </motion.div>

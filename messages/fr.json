@@ -4,8 +4,8 @@
     "hero": {
       "slides": [
         {
-          "headline": "Propulser le Commerce Mondial de Conteneurs",
-          "subtext": "Solutions de fret maritime fluides reliant les continents avec précision et rapidité."
+          "headline": "Propulser le Commerce Mondial par Conteneurs",
+          "subtext": "Des solutions de fret maritime fluides reliant les continents avec précision et rapidité."
         },
         {
           "headline": "La Précision en Mouvement",
@@ -17,7 +17,8 @@
         }
       ],
       "ctaQuote": "Obtenir un Devis",
-      "ctaTrack": "Suivre l'expédition"
+      "ctaTrack": "Suivre l'Expédition",
+      "badge": "Excellence Logistique Mondiale"
     },
     "stats": {
       "deliveries": "10K+ Livraisons",
@@ -29,35 +30,84 @@
       "container": "Transport de Conteneurs",
       "freight": "Transitaire",
       "warehousing": "Entreposage",
-      "fleet": "Gestion de Flotte"
+      "fleet": "Gestion de Flotte",
+      "tag": "Expertise"
     },
     "loader": {
-      "text": "Faire bouger votre monde..."
+      "text": "Faisons bouger votre monde...",
+      "status": "Global Nexus Opérationnel"
     },
     "about": {
-      "tag": "Notre Héritage",
-      "title": "Pionnier de la Logistique avec Précision et Passion",
-      "desc": "Fondée sur les principes de fiabilité et d'innovation, Taksh Logistics est passée d'un fournisseur de transport local à une puissance logistique mondiale."
+      "tag": "Notre Héritage et Futur",
+      "title": "Logistique Pionnière.",
+      "desc": "Fondée sur les principes de fiabilité et d'innovation, Taksh Logistics est passée d'un fournisseur de transport local à une puissance logistique mondiale.",
+      "reliability": "Fiabilité",
+      "network": "Réseau",
+      "success": "Taux de Réussite",
+      "hubs": "Hubs Mondiaux",
+      "excellence": "Années d'Excellence Mondiale"
     },
     "process": {
       "title": "Notre Processus Fluide",
-      "subtitle": "Comment nous travaillons"
+      "subtitle": "Comment Nous Travaillons"
     },
     "network": {
-      "tag": "Portée Mondiale",
-      "title": "Connecter chaque coin du globe"
+      "tag": "Centre de Commandement Mondial",
+      "title": "Infrastructure Stratégique.",
+      "status": "Siège Actif",
+      "statusLabel": "État du Réseau",
+      "hq": "Siège Mondial",
+      "hqDesc": "Hub logistique principal gérant les opérations mondiales et coordonnant plus de 1 200 mouvements de flotte par jour.",
+      "reach": "Portée Mondiale",
+      "ports": "Ports Actifs",
+      "uptime": "Disponibilité"
     },
     "cta": {
       "title": "Prêt à faire bouger votre monde ?",
-      "button": "Commencer maintenant"
+      "button": "Commencer Maintenant",
+      "tag": "Prêt à passer à l'échelle ?"
+    },
+    "contact": {
+      "tag": "Support Mondial",
+      "title": "Commençons une Conversation.",
+      "desc": "Nos experts logistiques sont à votre disposition 24h/24 et 7j/7 pour vous aider à naviguer dans les complexités du commerce mondial.",
+      "hq": "Siège Mondial",
+      "phone": "Ligne Directe",
+      "email": "E-mail Sécurisé",
+      "live": "Support en Direct",
+      "responseTime": "Temps de Réponse",
+      "time": "Moins de 15 Minutes",
+      "firstName": "Prénom",
+      "lastName": "Nom",
+      "emailLabel": "Adresse E-mail",
+      "message": "Votre Message",
+      "send": "Envoyer le Message",
+      "placeholder": "Parlez-nous de vos besoins logistiques...",
+      "visit": "Visitez-nous",
+      "call": "Appeler Maintenant",
+      "write": "Écrivez-nous"
+    },
+    "footer": {
+      "desc": "Pionnier du futur de la logistique mondiale avec une technologie de pointe et une qualité de service inégalée. Faisons bouger votre monde avec précision.",
+      "nav": "Navigation",
+      "touch": "Contact",
+      "updated": "Restez Informé",
+      "emailPlaceholder": "Adresse e-mail",
+      "subscribe": "S'abonner",
+      "secure": "Connexion Sécurisée Garantie",
+      "privacy": "Politique de Confidentialité",
+      "terms": "Conditions d'Utilisation"
     }
   },
   "Navigation": {
     "home": "Accueil",
-    "about": "À propos",
+    "about": "À Propos",
     "services": "Services",
     "fleet": "Flotte",
     "tracking": "Suivi",
-    "contact": "Contact"
+    "contact": "Contact",
+    "login": "Connexion",
+    "quote": "Devis",
+    "selectRegion": "Choisir la Région"
   }
 }

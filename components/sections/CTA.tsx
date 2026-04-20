@@ -42,7 +42,7 @@ export const CTA = () => {
                     <Zap className="h-4 w-4 text-yellow-300" />
                   </div>
                   <span className="text-xs font-bold uppercase tracking-[0.3em] text-blue-100">
-                    Ready to scale?
+                    {t("tag")}
                   </span>
                 </div>
                 
@@ -51,18 +51,18 @@ export const CTA = () => {
                 </h2>
                 
                 <p className="text-blue-100 text-lg md:text-xl font-light leading-relaxed max-w-md">
-                  Join the elite network of global traders who trust Taksh Logistics for their most critical cargo movements.
+                  {t("desc")}
                 </p>
               </motion.div>
 
               <div className="flex flex-wrap gap-8 mt-12">
                 <div className="flex items-center gap-3">
                   <Globe className="h-5 w-5 text-blue-200" />
-                  <span className="text-sm font-semibold text-blue-100">Global Coverage</span>
+                  <span className="text-sm font-semibold text-blue-100">{t("global")}</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <Shield className="h-5 w-5 text-blue-200" />
-                  <span className="text-sm font-semibold text-blue-100">Secure Transit</span>
+                  <span className="text-sm font-semibold text-blue-100">{t("secure")}</span>
                 </div>
               </div>
             </div>

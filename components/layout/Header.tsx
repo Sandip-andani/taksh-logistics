@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import { Link, usePathname, useRouter } from "@/navigation";
 import { useTranslations, useLocale } from "next-intl";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Globe, Moon, Sun, ChevronDown } from "lucide-react";
+import { Menu, Globe, Moon, Sun, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useTheme } from "next-themes";
 import {
@@ -58,12 +58,12 @@ export const Header = () => {
         }`}
       >
         {/* Logo */}
-        <Link href="/" className="flex items-center space-x-2 shrink-0">
-          <div className="h-10 w-10 bg-blue-600 rounded-xl flex items-center justify-center text-white font-bold text-xl">
-            T
+        <Link href="/" className="flex items-center space-x-2 shrink-0 group">
+          <div className="h-10 w-10 bg-blue-600 rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-blue-600/30 group-hover:scale-110 transition-transform duration-500">
+            TL
           </div>
-          <span className="text-xl font-bold tracking-tight font-outfit hidden sm:block text-gray-900 dark:text-white">
-            TAKSH
+          <span className="text-xl font-bold tracking-tighter font-outfit hidden sm:block text-gray-900 dark:text-white uppercase">
+            TAKSH <span className="text-blue-600">LOGISTICS</span>
           </span>
         </Link>
 
@@ -104,7 +104,9 @@ export const Header = () => {
               className="w-56 mt-2 rounded-[1.5rem] p-2 bg-white/80 dark:bg-black/80 backdrop-blur-2xl border border-black/5 dark:border-white/10 shadow-2xl animate-in fade-in zoom-in-95 duration-200"
             >
               <div className="px-3 py-2 mb-1">
-                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400">Select Region</span>
+                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400">
+                  {t("selectRegion")}
+                </span>
               </div>
               <div className="grid gap-1">
                 {locales.map((loc) => (
@@ -151,10 +153,10 @@ export const Header = () => {
 
           <div className="hidden md:flex items-center space-x-2 pl-2 border-l border-gray-100 dark:border-gray-800 ml-2">
             <Button variant="outline" className="rounded-xl h-10 px-6 border-gray-200 dark:border-gray-800 font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-white/5">
-              Log in
+              {t("login")}
             </Button>
             <Button className="rounded-xl h-10 px-6 bg-blue-600 hover:bg-blue-700 text-white font-bold shadow-lg shadow-blue-600/20">
-              Get Quote
+              {t("quote")}
             </Button>
           </div>
 
@@ -178,7 +180,9 @@ export const Header = () => {
                     </Link>
                   ))}
                   <div className="pt-8 border-t border-gray-100 dark:border-gray-800">
-                    <span className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4 block">Select Language</span>
+                    <span className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4 block">
+                      {t("selectRegion")}
+                    </span>
                     <div className="grid grid-cols-2 gap-2">
                       {locales.map((loc) => (
                         <Button
@@ -193,8 +197,12 @@ export const Header = () => {
                     </div>
                   </div>
                   <div className="pt-8 grid grid-cols-2 gap-4">
-                    <Button variant="outline" className="rounded-2xl h-14 text-lg border-gray-200">Log in</Button>
-                    <Button className="rounded-2xl h-14 text-lg bg-blue-600">Get Quote</Button>
+                    <Button variant="outline" className="rounded-2xl h-14 text-lg border-gray-200">
+                      {t("login")}
+                    </Button>
+                    <Button className="rounded-2xl h-14 text-lg bg-blue-600">
+                      {t("quote")}
+                    </Button>
                   </div>
                 </div>
               </SheetContent>

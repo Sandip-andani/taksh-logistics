@@ -7,8 +7,11 @@ import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Mail, Phone, MapPin, Send, MessageSquare, Globe, ArrowRight } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export default function ContactPage() {
+  const t = useTranslations("Index.contact");
+
   return (
     <main className="min-h-screen bg-white dark:bg-[#050505] transition-colors duration-500 overflow-hidden">
       <Header />
@@ -29,7 +32,7 @@ export default function ContactPage() {
             >
               <div className="h-[1px] w-12 bg-blue-600" />
               <span className="text-blue-600 font-bold tracking-[0.4em] uppercase text-[10px]">
-                Global Support
+                {t("tag")}
               </span>
             </motion.div>
             
@@ -38,8 +41,10 @@ export default function ContactPage() {
               animate={{ opacity: 1, y: 0 }}
               className="text-5xl md:text-7xl font-bold font-outfit tracking-tighter leading-[0.8] text-gray-900 dark:text-white mb-6"
             >
-              Let's Start a <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-500">Conversation.</span>
+              {t("title").split(" ")[0]} {t("title").split(" ")[1]} {t("title").split(" ")[2]} <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-500">
+                {t("title").split(" ").slice(3).join(" ")}
+              </span>
             </motion.h1>
             
             <motion.p 
@@ -48,7 +53,7 @@ export default function ContactPage() {
               transition={{ delay: 0.2 }}
               className="text-gray-500 dark:text-gray-400 text-base md:text-lg font-light leading-relaxed max-w-lg border-l border-gray-200 dark:border-white/10 pl-6 italic"
             >
-              Our logistics experts are standing by 24/7 to help you navigate the complexities of global trade.
+              {t("desc")}
             </motion.p>
           </div>
 
@@ -57,9 +62,9 @@ export default function ContactPage() {
             {/* Left: Interactive Contact Cards - Scaled Down */}
             <div className="lg:col-span-5 space-y-4">
               {[
-                { icon: MapPin, title: "Global HQ", value: "Logistics Plaza, Mumbai, IN" },
-                { icon: Phone, title: "Direct Line", value: "+91 98765 43210" },
-                { icon: Mail, title: "Secure Email", value: "contact@taksh.com" },
+                { icon: MapPin, title: t("hq"), value: "Logistics Plaza, Mumbai, IN" },
+                { icon: Phone, title: t("phone"), value: "+91 98765 43210" },
+                { icon: Mail, title: t("email"), value: "contact@taksh.com" },
               ].map((item, i) => (
                 <motion.div
                   key={i}
@@ -88,10 +93,10 @@ export default function ContactPage() {
                 <div className="relative z-10">
                   <div className="flex items-center gap-3 mb-3">
                     <div className="h-1.5 w-1.5 rounded-full bg-white animate-ping" />
-                    <span className="text-[9px] font-bold uppercase tracking-widest text-blue-100">Live Support</span>
+                    <span className="text-[9px] font-bold uppercase tracking-widest text-blue-100">{t("live")}</span>
                   </div>
-                  <div className="text-xl font-bold font-outfit mb-1">Response Time</div>
-                  <div className="text-3xl font-bold opacity-80 font-outfit tracking-tight">Under 15 Minutes</div>
+                  <div className="text-xl font-bold font-outfit mb-1">{t("responseTime")}</div>
+                  <div className="text-3xl font-bold opacity-80 font-outfit tracking-tight">{t("time")}</div>
                 </div>
                 <Globe className="absolute -bottom-6 -right-6 h-32 w-32 opacity-10" />
               </div>
@@ -111,14 +116,14 @@ export default function ContactPage() {
                 <div className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-1.5">
-                      <label className="text-[9px] font-bold text-gray-400 uppercase tracking-[0.2em] ml-3">First Name</label>
+                      <label className="text-[9px] font-bold text-gray-400 uppercase tracking-[0.2em] ml-3">{t("firstName")}</label>
                       <Input 
                         placeholder="John" 
                         className="h-14 rounded-xl bg-white dark:bg-black/40 border-gray-100 dark:border-white/10 px-5 focus:ring-2 focus:ring-blue-600 transition-all text-sm" 
                       />
                     </div>
                     <div className="space-y-1.5">
-                      <label className="text-[9px] font-bold text-gray-400 uppercase tracking-[0.2em] ml-3">Last Name</label>
+                      <label className="text-[9px] font-bold text-gray-400 uppercase tracking-[0.2em] ml-3">{t("lastName")}</label>
                       <Input 
                         placeholder="Doe" 
                         className="h-14 rounded-xl bg-white dark:bg-black/40 border-gray-100 dark:border-white/10 px-5 focus:ring-2 focus:ring-blue-600 transition-all text-sm" 
@@ -127,7 +132,7 @@ export default function ContactPage() {
                   </div>
                   
                   <div className="space-y-1.5">
-                    <label className="text-[9px] font-bold text-gray-400 uppercase tracking-[0.2em] ml-3">Email Address</label>
+                    <label className="text-[9px] font-bold text-gray-400 uppercase tracking-[0.2em] ml-3">{t("emailLabel")}</label>
                     <Input 
                       placeholder="john@example.com" 
                       className="h-14 rounded-xl bg-white dark:bg-black/40 border-gray-100 dark:border-white/10 px-5 focus:ring-2 focus:ring-blue-600 transition-all text-sm" 
@@ -135,15 +140,15 @@ export default function ContactPage() {
                   </div>
 
                   <div className="space-y-1.5">
-                    <label className="text-[9px] font-bold text-gray-400 uppercase tracking-[0.2em] ml-3">Your Message</label>
+                    <label className="text-[9px] font-bold text-gray-400 uppercase tracking-[0.2em] ml-3">{t("message")}</label>
                     <textarea 
-                      placeholder="Tell us about your logistics needs..." 
+                      placeholder={t("placeholder")} 
                       className="w-full h-36 rounded-2xl border border-gray-100 dark:border-white/10 bg-white dark:bg-black/40 p-6 focus:ring-2 focus:ring-blue-600 outline-none transition-all placeholder:text-gray-300 dark:placeholder:text-gray-700 text-sm"
                     />
                   </div>
 
                   <Button className="w-full h-16 rounded-2xl bg-blue-600 hover:bg-blue-700 text-base font-bold uppercase tracking-widest shadow-2xl shadow-blue-600/30 group">
-                    Send Message
+                    {t("send")}
                     <Send className="h-5 w-5 ml-3 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                   </Button>
                 </div>

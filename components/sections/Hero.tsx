@@ -88,9 +88,6 @@ export const Hero = () => {
 
       {/* Vertical Slider Navigation */}
       <div className="absolute right-10 top-1/2 -translate-y-1/2 z-30 flex flex-col items-center space-y-6 hidden md:flex">
-        <div className="text-white/30 text-[10px] font-bold uppercase tracking-[0.2em] [writing-mode:vertical-lr] mb-4">
-          Slide 0{currentSlide + 1}
-        </div>
         {slides.map((_, i) => (
           <button
             key={i}

@@ -5,19 +5,20 @@
       "slides": [
         {
           "headline": "Impulsando el Comercio Global de Contenedores",
-          "subtext": "Soluciones de carga marítima integrales que conectan continentes con precisión y rapidez."
+          "subtext": "Soluciones de transporte marítimo fluidas que conectan continentes con precisión y rapidez."
         },
         {
           "headline": "Precisión en Movimiento",
           "subtext": "Transporte por carretera inteligente con seguimiento en tiempo real para cada envío."
         },
         {
-          "headline": "Centros Logísticos Automatizados",
+          "headline": "Hubs Logísticos Automatizados",
           "subtext": "Almacenamiento estratégico impulsado por tecnología de automatización de vanguardia."
         }
       ],
-      "ctaQuote": "Solicitar Cotización",
-      "ctaTrack": "Rastrear Envío"
+      "ctaQuote": "Obtener Cotización",
+      "ctaTrack": "Rastrear Envío",
+      "badge": "Excelencia Logística Global"
     },
     "stats": {
       "deliveries": "10K+ Entregas",
@@ -29,35 +30,84 @@
       "container": "Transporte de Contenedores",
       "freight": "Transporte de Carga",
       "warehousing": "Almacenamiento",
-      "fleet": "Gestión de Flotas"
+      "fleet": "Gestión de Flotas",
+      "tag": "Experiencia"
     },
     "loader": {
-      "text": "Moviendo su mundo..."
+      "text": "Moviendo su mundo...",
+      "status": "Global Nexus Operativo"
     },
     "about": {
-      "tag": "Nuestro Legado",
-      "title": "Liderando la Logística con Precisión y Pasión",
-      "desc": "Fundada sobre los principios de fiabilidad e innovación, Taksh Logistics ha pasado de ser un proveedor de transporte local a una potencia logística global."
+      "tag": "Nuestro Legado y Futuro",
+      "title": "Logística Pionera.",
+      "desc": "Fundada en los principios de confiabilidad e innovación, Taksh Logistics ha crecido de ser un proveedor de transporte local a una potencia logística global.",
+      "reliability": "Confiabilidad",
+      "network": "Red",
+      "success": "Tasa de Éxito",
+      "hubs": "Hubs Globales",
+      "excellence": "Años de Excelencia Global"
     },
     "process": {
-      "title": "Nuestro Proceso Integral",
-      "subtitle": "Cómo trabajamos"
+      "title": "Nuestro Proceso Fluido",
+      "subtitle": "Cómo Trabajamos"
     },
     "network": {
-      "tag": "Alcance Mundial",
-      "title": "Conectando cada rincón del mundo"
+      "tag": "Centro de Comando Global",
+      "title": "Infraestructura Estratégica.",
+      "status": "Sede Central Activa",
+      "statusLabel": "Estado de la Red",
+      "hq": "Sede Global",
+      "hqDesc": "Hub logístico principal que gestiona operaciones globales y coordina más de 1,200 movimientos de flota diarios.",
+      "reach": "Alcance Global",
+      "ports": "Puertos Activos",
+      "uptime": "Tiempo de Actividad"
     },
     "cta": {
       "title": "¿Listo para mover su mundo?",
-      "button": "Empezar ahora"
+      "button": "Comenzar Ahora",
+      "tag": "¿Listo para escalar?"
+    },
+    "contact": {
+      "tag": "Soporte Global",
+      "title": "Iniciemos una Conversación.",
+      "desc": "Nuestros expertos en logística están disponibles 24/7 para ayudarlo a navegar por las complejidades del comercio global.",
+      "hq": "Sede Global",
+      "phone": "Línea Directa",
+      "email": "Correo Seguro",
+      "live": "Soporte en Vivo",
+      "responseTime": "Tiempo de Respuesta",
+      "time": "Menos de 15 Minutos",
+      "firstName": "Nombre",
+      "lastName": "Apellido",
+      "emailLabel": "Correo Electrónico",
+      "message": "Su Mensaje",
+      "send": "Enviar Mensaje",
+      "placeholder": "Cuéntenos sobre sus necesidades logísticas...",
+      "visit": "Visítenos",
+      "call": "Llamar Ahora",
+      "write": "Escríbanos"
+    },
+    "footer": {
+      "desc": "Pioneros en el futuro de la logística global con tecnología de punta y una calidad de servicio inigualable. Moviendo su mundo con precisión.",
+      "nav": "Navegación",
+      "touch": "Contacto",
+      "updated": "Manténgase Informado",
+      "emailPlaceholder": "Dirección de correo electrónico",
+      "subscribe": "Suscribirse",
+      "secure": "Conexión Segura Garantizada",
+      "privacy": "Política de Privacidad",
+      "terms": "Términos de Servicio"
     }
   },
   "Navigation": {
     "home": "Inicio",
-    "about": "Acerca de",
+    "about": "Nosotros",
     "services": "Servicios",
     "fleet": "Flota",
     "tracking": "Seguimiento",
-    "contact": "Contacto"
+    "contact": "Contacto",
+    "login": "Ingresar",
+    "quote": "Cotizar",
+    "selectRegion": "Seleccionar Región"
   }
 }

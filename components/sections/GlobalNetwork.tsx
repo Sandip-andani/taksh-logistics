@@ -3,14 +3,17 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { Target, Globe, Shield, Zap } from "lucide-react";
+import { Target, Globe, Shield } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export const GlobalNetwork = () => {
-  const hub = { 
-    name: "Surat, Gujarat", 
-    role: "Global Headquarters", 
-    coords: { t: "44%", l: "68%" } 
-  };
+  const t = useTranslations("Index.network");
+
+  const hubs = [
+    { label: t("reach"), value: "120+", icon: Globe },
+    { label: t("ports"), value: "350+", icon: Target },
+    { label: t("uptime"), value: "99.9%", icon: Shield },
+  ];
 
   return (
     <section className="py-16 bg-white dark:bg-[#050505] relative overflow-hidden transition-colors duration-500">
@@ -32,12 +35,14 @@ export const GlobalNetwork = () => {
             >
               <div className="h-[1px] w-10 bg-blue-600" />
               <span className="text-blue-600 font-bold tracking-[0.4em] uppercase text-[10px]">
-                Global Command Center
+                {t("tag")}
               </span>
             </motion.div>
             <h2 className="text-5xl md:text-7xl font-bold font-outfit text-gray-900 dark:text-white tracking-tighter leading-none">
-              Strategic <br /> 
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-500">Infrastructure.</span>
+              {t("title").split(".")[0]} <br /> 
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-500">
+                {t("title").split(".")[1]}.
+              </span>
             </h2>
           </div>
           
@@ -52,8 +57,8 @@ export const GlobalNetwork = () => {
               <div className="absolute inset-0 h-3 w-3 bg-green-500 rounded-full" />
             </div>
             <div>
-              <div className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1">Network Status</div>
-              <div className="text-xl font-bold text-gray-900 dark:text-white font-outfit">HQ Live & Active</div>
+              <div className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1">{t("statusLabel")}</div>
+              <div className="text-xl font-bold text-gray-900 dark:text-white font-outfit">{t("status")}</div>
             </div>
           </motion.div>
         </div>
@@ -70,7 +75,6 @@ export const GlobalNetwork = () => {
             />
           </div>
 
-          {/* Premium Blue Lighting Overlays (Dark Mode Only) */}
           <div className="absolute inset-0 pointer-events-none hidden dark:block">
             <div className="absolute top-1/4 left-1/3 w-[500px] h-[500px] bg-blue-600/20 blur-[150px]" />
             <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-indigo-600/10 blur-[120px]" />
@@ -85,7 +89,7 @@ export const GlobalNetwork = () => {
           {/* Surat Marker Only */}
           <div
             className="absolute -translate-x-1/2 -translate-y-1/2"
-            style={{ top: hub.coords.t, left: hub.coords.l }}
+            style={{ top: "44%", left: "68%" }}
           >
             <div className="relative group">
               <motion.div 
@@ -110,19 +114,21 @@ export const GlobalNetwork = () => {
               
               <div className="flex items-center gap-3 mb-4">
                 <div className="h-2 w-2 rounded-full bg-blue-600 animate-pulse" />
-                <span className="text-[10px] font-bold text-blue-600 uppercase tracking-widest">{hub.role}</span>
+                <span className="text-[10px] font-bold text-blue-600 uppercase tracking-widest">
+                  {t("hq")}
+                </span>
               </div>
               
               <h3 className="text-4xl font-bold font-outfit text-gray-900 dark:text-white mb-2 leading-none">
-                {hub.name}
+                Surat, Gujarat
               </h3>
               <p className="text-gray-500 dark:text-gray-400 text-sm font-light leading-relaxed">
-                Primary logistics hub managing global operations and coordinating over 1,200+ fleet movements daily.
+                {t("hqDesc")}
               </p>
 
               <div className="flex gap-4 mt-8">
                 <div className="px-6 py-2 bg-blue-600 text-white rounded-full text-[10px] font-bold uppercase tracking-widest shadow-lg shadow-blue-500/20">
-                  Global HQ
+                  {t("hq")}
                 </div>
               </div>
             </div>
@@ -130,11 +136,7 @@ export const GlobalNetwork = () => {
 
           {/* Core Stats Overlay */}
           <div className="absolute top-10 right-10 hidden xl:flex flex-col gap-4 z-20">
-            {[
-              { label: "Global Reach", value: "120+", icon: Globe },
-              { label: "Active Ports", value: "350+", icon: Target },
-              { label: "Uptime", value: "99.9%", icon: Shield },
-            ].map((stat, i) => (
+            {hubs.map((stat, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, x: 50 }}

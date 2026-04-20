@@ -2,10 +2,12 @@
 
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 export const Loader = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [counter, setCounter] = useState(0);
+  const t = useTranslations("Index.loader");
 
   useEffect(() => {
     // Percentage Counter Logic
@@ -82,7 +84,7 @@ export const Loader = () => {
                 <div className="flex items-center gap-2">
                   <div className="h-[1px] w-8 bg-blue-600/30" />
                   <span className="text-[10px] font-bold text-gray-400 uppercase tracking-[0.5em]">
-                    Global Nexus Operational
+                    {t("status")}
                   </span>
                   <div className="h-[1px] w-8 bg-blue-600/30" />
                 </div>
