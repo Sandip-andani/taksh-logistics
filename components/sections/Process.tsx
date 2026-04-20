@@ -29,8 +29,8 @@ export const Process = () => {
   ];
 
   return (
-    <section className="py-24 bg-gray-50 dark:bg-[#050505] relative overflow-hidden">
-      <div className="container mx-auto px-4 md:px-6">
+    <section className="pb-24 pt-0 bg-gray-50 dark:bg-[#050505] relative overflow-hidden">
+      <div className="container mx-auto px-10 md:px-20 lg:px-32 max-w-[1600px]">
         <div className="text-center max-w-3xl mx-auto mb-20">
           <h2 className="text-4xl md:text-5xl font-bold font-outfit mb-6 dark:text-white">Our Seamless Process</h2>
           <p className="text-gray-500 text-lg">We've refined the complexities of global logistics into a transparent, four-step journey that guarantees safety and speed.</p>

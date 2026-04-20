@@ -89,21 +89,43 @@ export const Header = () => {
           {/* Language Switcher */}
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant="ghost" size="sm" className="hidden md:flex gap-2 rounded-full h-10">
-                <Globe className="h-4 w-4" />
-                <span className="uppercase text-xs font-bold">{locale}</span>
+              <Button 
+                variant="ghost" 
+                size="sm" 
+                className="hidden md:flex gap-2 rounded-full h-10 px-4 hover:bg-black/5 dark:hover:bg-white/10 transition-all border border-transparent hover:border-black/5 dark:hover:border-white/10"
+              >
+                <Globe className="h-4 w-4 text-blue-600 dark:text-blue-400" />
+                <span className="uppercase text-xs font-bold tracking-widest text-gray-900 dark:text-white">{locale}</span>
+                <ChevronDown className="h-3 w-3 text-gray-400" />
               </Button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent align="end" className="w-40 rounded-2xl p-2">
-              {locales.map((loc) => (
-                <DropdownMenuItem
-                  key={loc}
-                  onClick={() => handleLanguageChange(loc)}
-                  className={`rounded-xl ${locale === loc ? "bg-blue-50 dark:bg-blue-900/20 text-blue-600 font-bold" : ""}`}
-                >
-                  {localeNames[loc]}
-                </DropdownMenuItem>
-              ))}
+            <DropdownMenuContent 
+              align="end" 
+              className="w-56 mt-2 rounded-[1.5rem] p-2 bg-white/80 dark:bg-black/80 backdrop-blur-2xl border border-black/5 dark:border-white/10 shadow-2xl animate-in fade-in zoom-in-95 duration-200"
+            >
+              <div className="px-3 py-2 mb-1">
+                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400">Select Region</span>
+              </div>
+              <div className="grid gap-1">
+                {locales.map((loc) => (
+                  <DropdownMenuItem
+                    key={loc}
+                    onClick={() => handleLanguageChange(loc)}
+                    className={`
+                      flex items-center justify-between rounded-xl px-4 py-2.5 cursor-pointer transition-all
+                      ${locale === loc 
+                        ? "bg-blue-600 text-white shadow-lg shadow-blue-600/20" 
+                        : "text-gray-600 dark:text-gray-300 hover:bg-black/5 dark:hover:bg-white/10 hover:translate-x-1"
+                      }
+                    `}
+                  >
+                    <span className="text-sm font-semibold">{localeNames[loc]}</span>
+                    {locale === loc && (
+                      <div className="h-1.5 w-1.5 rounded-full bg-white animate-pulse" />
+                    )}
+                  </DropdownMenuItem>
+                ))}
+              </div>
             </DropdownMenuContent>
           </DropdownMenu>
 
