@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Search, Package, Ship, MapPin, ArrowRight } from "lucide-react";
+import { Search, Package, Ship, MapPin, ArrowRight, Zap, TrendingUp, Shield } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 export const Process = () => {
@@ -36,7 +36,7 @@ export const Process = () => {
   ];
 
   return (
-    <section className="py-32 bg-white dark:bg-[#030303] relative overflow-hidden transition-colors duration-500">
+    <section className="pt-32 pb-10 bg-white dark:bg-[#030303] relative overflow-hidden transition-colors duration-500">
       
       {/* Background Decorative Elements */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none opacity-20 dark:opacity-40">
@@ -148,23 +148,94 @@ export const Process = () => {
           </div>
         </div>
 
-        {/* Global Progress Indicator */}
-        <motion.div 
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          className="mt-32 flex flex-wrap justify-center gap-12 border-t border-gray-100 dark:border-white/5 pt-16"
-        >
-          {[
-            { label: "On-Time Dispatch", value: "99.8%" },
-            { label: "Route Efficiency", value: "94.5%" },
-            { label: "Real-time Tracking", value: "100%" },
-          ].map((metric, i) => (
-            <div key={i} className="flex flex-col items-center">
-              <span className="text-3xl font-bold font-outfit text-gray-900 dark:text-white">{metric.value}</span>
-              <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-2">{metric.label}</span>
-            </div>
-          ))}
-        </motion.div>
+        {/* Premium Performance Metrics Dashboard */}
+        <div className="mt-20">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            className="flex flex-col items-center mb-16 text-center"
+          >
+            <div className="text-[10px] font-bold text-blue-600 uppercase tracking-[0.4em] mb-4">Performance Intelligence</div>
+            <h3 className="text-3xl md:text-5xl font-bold font-outfit tracking-tight text-gray-900 dark:text-white">Real-time Efficiency Metrics</h3>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              { 
+                label: "On-Time Dispatch", 
+                value: "99.8%", 
+                icon: Zap, 
+                desc: "Industry-leading accuracy across global routes.",
+                color: "text-blue-600",
+                bg: "bg-blue-600/10"
+              },
+              { 
+                label: "Route Efficiency", 
+                value: "94.5%", 
+                icon: TrendingUp, 
+                desc: "Proprietary AI-driven path optimization.",
+                color: "text-indigo-600",
+                bg: "bg-indigo-600/10"
+              },
+              { 
+                label: "Real-time Tracking", 
+                value: "100%", 
+                icon: Shield, 
+                desc: "Complete transparency for every container.",
+                color: "text-blue-500",
+                bg: "bg-blue-500/10"
+              },
+            ].map((metric, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ delay: i * 0.1 }}
+                className="group relative p-8 rounded-[3rem] bg-white dark:bg-white/[0.02] border border-gray-100 dark:border-white/5 hover:border-blue-500/20 transition-all duration-500"
+              >
+                {/* Background Glow */}
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-600/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-[3rem]" />
+                
+                <div className="relative z-10 flex flex-col items-center text-center">
+                  <div className={`h-16 w-16 rounded-2xl ${metric.bg} flex items-center justify-center ${metric.color} mb-8 group-hover:scale-110 transition-transform duration-500`}>
+                    <metric.icon className="h-7 w-7" />
+                  </div>
+                  
+                  <div className="relative mb-2">
+                    <span className="text-5xl font-black font-outfit text-gray-900 dark:text-white tracking-tighter">
+                      {metric.value}
+                    </span>
+                    {/* Tiny status dot */}
+                    <div className="absolute -top-1 -right-4 h-2 w-2 rounded-full bg-blue-600 animate-pulse" />
+                  </div>
+                  
+                  <div className="text-[10px] font-bold text-gray-400 dark:text-gray-500 uppercase tracking-[0.3em] mb-4">
+                    {metric.label}
+                  </div>
+                  
+                  <p className="text-xs text-gray-500 dark:text-gray-400 font-light leading-relaxed max-w-[200px]">
+                    {metric.desc}
+                  </p>
+                </div>
+
+                {/* Decorative Progress Arc (SVG) */}
+                <div className="absolute top-6 right-6 opacity-10 group-hover:opacity-20 transition-opacity">
+                  <svg width="40" height="40" viewBox="0 0 40 40" className="rotate-[-90deg]">
+                    <circle cx="20" cy="20" r="18" stroke="currentColor" strokeWidth="2" fill="none" className="text-gray-200 dark:text-white/10" />
+                    <motion.circle 
+                      cx="20" cy="20" r="18" 
+                      stroke="currentColor" strokeWidth="2" fill="none" 
+                      strokeDasharray="113"
+                      initial={{ strokeDashoffset: 113 }}
+                      whileInView={{ strokeDashoffset: 113 - (113 * parseFloat(metric.value) / 100) }}
+                      className={metric.color}
+                    />
+                  </svg>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
 
       </div>
     </section>

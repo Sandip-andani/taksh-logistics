@@ -3,104 +3,123 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Globe, Shield, Zap } from "lucide-react";
+import { ArrowRight, Globe, Shield, Zap, Box, TrendingUp, Users } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 export const CTA = () => {
   const t = useTranslations("Index.cta");
 
+  const floatingCards = [
+    { icon: Box, label: "Active Containers", value: "12,402", color: "blue" },
+    { icon: TrendingUp, label: "Success Rate", value: "99.9%", color: "indigo" },
+    { icon: Users, label: "Global Clients", value: "2,500+", color: "emerald" },
+  ];
+
   return (
-    <section className="py-24 bg-white dark:bg-[#080808] relative overflow-hidden">
-      {/* Boxed Layout Wrapper */}
+    <section className="py-20 bg-white dark:bg-[#030303] relative overflow-hidden transition-colors duration-500">
+      
+      {/* Background Orbs */}
+      <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
+        <div className="absolute top-[-20%] left-[-10%] w-[500px] h-[500px] bg-blue-600/10 dark:bg-blue-600/5 blur-[150px] rounded-full transition-colors duration-500" />
+        <div className="absolute bottom-[-20%] right-[-10%] w-[400px] h-[400px] bg-indigo-600/10 dark:bg-indigo-600/5 blur-[120px] rounded-full transition-colors duration-500" />
+      </div>
+
       <div className="container mx-auto px-10 md:px-20 lg:px-32 max-w-[1600px] relative z-10">
         
-        <div className="relative overflow-hidden rounded-[4rem] p-12 md:p-24 bg-gradient-to-br from-blue-700 via-blue-600 to-indigo-800 shadow-[0_20px_50px_rgba(37,99,235,0.3)]">
+        <div className="relative overflow-hidden rounded-[3rem] md:rounded-[4rem] bg-gradient-to-br from-blue-700 via-blue-600 to-indigo-800 dark:from-[#080808] dark:via-[#0c0c0c] dark:to-black border border-blue-500/20 dark:border-white/5 shadow-2xl transition-all duration-500">
           
-          {/* Animated Background Textures */}
-          <div className="absolute inset-0 opacity-20">
-            <div className="absolute top-0 left-0 w-full h-full bg-[url('/grid.svg')] bg-repeat opacity-30" />
+          {/* Mesh Background */}
+          <div className="absolute inset-0 opacity-40">
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-transparent to-transparent" />
+            <div className="absolute top-0 left-0 w-full h-full bg-[url('/grid.svg')] bg-repeat opacity-10" />
+            
+            {/* Animated Light Blobs */}
             <motion.div 
               animate={{ 
-                rotate: [0, 360],
-                scale: [1, 1.2, 1]
+                x: [0, 50, 0],
+                y: [0, -30, 0],
               }}
-              transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-              className="absolute -top-1/2 -right-1/2 w-full h-full bg-gradient-to-br from-white/20 to-transparent blur-[120px] rounded-full" 
+              transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+              className="absolute top-0 left-1/4 w-80 h-80 bg-white/10 dark:bg-blue-500/10 blur-[100px] rounded-full" 
             />
           </div>
 
-          <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-10 p-8 md:p-16 items-center">
             
-            <div className="text-white">
+            {/* Main Content */}
+            <div className="lg:col-span-7">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
               >
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="bg-white/20 p-2 rounded-lg backdrop-blur-md">
-                    <Zap className="h-4 w-4 text-yellow-300" />
-                  </div>
-                  <span className="text-xs font-bold uppercase tracking-[0.3em] text-blue-100">
+                <div className="inline-flex items-center gap-3 px-4 py-1.5 rounded-full bg-white/10 dark:bg-blue-600/10 border border-white/20 dark:border-blue-500/20 mb-8">
+                  <Zap className="h-3.5 w-3.5 text-white dark:text-blue-500 animate-pulse" />
+                  <span className="text-[9px] font-bold uppercase tracking-[0.4em] text-white/90 dark:text-blue-400">
                     {t("tag")}
                   </span>
                 </div>
                 
-                <h2 className="text-5xl md:text-7xl font-bold font-outfit tracking-tighter leading-[0.9] mb-8">
-                  {t("title")}
+                <h2 className="text-4xl md:text-6xl font-bold font-outfit tracking-tighter leading-[0.9] text-white mb-8">
+                  {t("title").split("?")[0]}<span className="text-blue-200 dark:text-blue-600">?</span>
                 </h2>
                 
-                <p className="text-blue-100 text-lg md:text-xl font-light leading-relaxed max-w-md">
+                <p className="text-blue-50/70 dark:text-gray-400 text-base md:text-lg font-light leading-relaxed max-w-lg mb-10 border-l-2 border-white/20 dark:border-blue-600/30 pl-6">
                   {t("desc")}
                 </p>
-              </motion.div>
 
-              <div className="flex flex-wrap gap-8 mt-12">
-                <div className="flex items-center gap-3">
-                  <Globe className="h-5 w-5 text-blue-200" />
-                  <span className="text-sm font-semibold text-blue-100">{t("global")}</span>
+                <div className="flex flex-col sm:flex-row gap-6">
+                  <Button 
+                    size="lg" 
+                    className="h-14 px-8 text-base font-bold rounded-xl bg-white dark:bg-blue-600 text-blue-600 dark:text-white hover:bg-gray-100 dark:hover:bg-blue-700 shadow-xl shadow-black/10 dark:shadow-blue-600/20 transition-all hover:scale-105 active:scale-95 flex gap-3 group"
+                  >
+                    {t("button")}
+                    <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                  </Button>
+                  
+                  <div className="flex items-center gap-6">
+                    <div className="flex -space-x-2">
+                      {[1, 2, 3, 4].map((i) => (
+                        <div key={i} className="h-8 w-8 rounded-full border-2 border-blue-600 dark:border-[#080808] bg-gray-800 flex items-center justify-center overflow-hidden">
+                          <img src={`https://i.pravatar.cc/100?u=${i}`} alt="User" className="h-full w-full object-cover opacity-80" />
+                        </div>
+                      ))}
+                    </div>
+                    <div className="text-[9px] font-bold text-white/60 dark:text-gray-500 uppercase tracking-widest leading-tight">
+                      Trusted by <br /> <span className="text-white">2,500+ Corporations</span>
+                    </div>
+                  </div>
                 </div>
-                <div className="flex items-center gap-3">
-                  <Shield className="h-5 w-5 text-blue-200" />
-                  <span className="text-sm font-semibold text-blue-100">{t("secure")}</span>
-                </div>
-              </div>
+              </motion.div>
             </div>
 
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              className="flex justify-center lg:justify-end"
-            >
-              <motion.div
-                whileHover={{ scale: 1.05, rotate: -2 }}
-                whileTap={{ scale: 0.95 }}
-                className="relative group"
-              >
-                {/* Button Glow Effect */}
-                <div className="absolute -inset-4 bg-white/20 blur-2xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                
-                <Button 
-                  size="lg" 
-                  className="bg-white text-blue-600 hover:bg-gray-50 h-20 px-12 text-2xl font-bold rounded-[2rem] shadow-2xl relative z-10 transition-all flex gap-4 group"
-                >
-                  {t("button")}
-                  <ArrowRight className="h-8 w-8 transition-transform duration-500 group-hover:translate-x-2" />
-                </Button>
-              </motion.div>
-            </motion.div>
-          </div>
+            {/* Visual Elements: Floating Metrics */}
+            <div className="lg:col-span-5 relative">
+              <div className="grid gap-4">
+                {floatingCards.map((card, i) => (
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0, x: 30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ delay: i * 0.1 }}
+                    whileHover={{ scale: 1.05, x: -5 }}
+                    className="group p-5 rounded-[1.5rem] bg-white/10 dark:bg-white/[0.03] border border-white/20 dark:border-white/5 backdrop-blur-xl flex items-center gap-5 hover:bg-white/20 dark:hover:bg-white/[0.08] transition-all cursor-default"
+                  >
+                    <div className={`h-11 w-11 rounded-xl bg-white/10 dark:bg-blue-600/10 flex items-center justify-center text-white dark:text-blue-500 group-hover:bg-white group-hover:text-blue-600 dark:group-hover:bg-blue-600 dark:group-hover:text-white transition-all duration-500 shadow-inner`}>
+                      <card.icon className="h-5 w-5" />
+                    </div>
+                    <div>
+                      <div className="text-[9px] font-bold text-white/50 dark:text-gray-500 uppercase tracking-[0.2em] mb-0.5">{card.label}</div>
+                      <div className="text-xl font-bold text-white font-outfit tracking-tight">{card.value}</div>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
 
-          {/* Abstract Floating Icons */}
-          <motion.div 
-            animate={{ y: [0, -20, 0], rotate: [0, 10, 0] }}
-            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute top-10 right-10 opacity-10 hidden md:block"
-          >
-            <Shield className="h-32 w-32 text-white" />
-          </motion.div>
-          
+              <Shield className="absolute -top-6 -right-6 h-48 w-48 text-white/5 dark:text-blue-600/5 -z-10 rotate-12" />
+            </div>
+
+          </div>
         </div>
       </div>
     </section>

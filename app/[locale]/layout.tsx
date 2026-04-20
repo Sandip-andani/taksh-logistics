@@ -32,7 +32,7 @@ export default async function RootLayout(props: {
 
   return (
     <html lang={locale} suppressHydrationWarning>
-      <body className={`${inter.variable} ${outfit.variable} font-sans antialiased`}>
+      <body className={`${inter.variable} ${outfit.variable} font-sans antialiased overflow-x-hidden`}>
         <NextIntlClientProvider messages={messages} locale={locale}>
           <ThemeProvider
             attribute="class"

@@ -41,7 +41,7 @@ export const FleetSlider = () => {
   ];
 
   return (
-    <section className="py-20 bg-white dark:bg-[#050505] relative overflow-hidden transition-colors duration-500">
+    <section className="pt-10 pb-20 bg-white dark:bg-[#050505] relative overflow-hidden transition-colors duration-500">
       {/* Dynamic Background Elements */}
       <div className="absolute top-0 right-0 w-1/2 h-full bg-blue-600/5 blur-[150px] -z-10" />
       <div className="absolute bottom-0 left-0 w-1/2 h-full bg-indigo-600/5 blur-[150px] -z-10" />
