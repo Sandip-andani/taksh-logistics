@@ -1,0 +1,63 @@
+{
+  "Index": {
+    "title": "Taksh Logistics",
+    "hero": {
+      "slides": [
+        {
+          "headline": "Impulsando el Comercio Global de Contenedores",
+          "subtext": "Soluciones de carga marítima integrales que conectan continentes con precisión y rapidez."
+        },
+        {
+          "headline": "Precisión en Movimiento",
+          "subtext": "Transporte por carretera inteligente con seguimiento en tiempo real para cada envío."
+        },
+        {
+          "headline": "Centros Logísticos Automatizados",
+          "subtext": "Almacenamiento estratégico impulsado por tecnología de automatización de vanguardia."
+        }
+      ],
+      "ctaQuote": "Solicitar Cotización",
+      "ctaTrack": "Rastrear Envío"
+    },
+    "stats": {
+      "deliveries": "10K+ Entregas",
+      "clients": "500+ Clientes",
+      "support": "Soporte 24/7"
+    },
+    "services": {
+      "title": "Nuestros Servicios Premium",
+      "container": "Transporte de Contenedores",
+      "freight": "Transporte de Carga",
+      "warehousing": "Almacenamiento",
+      "fleet": "Gestión de Flotas"
+    },
+    "loader": {
+      "text": "Moviendo su mundo..."
+    },
+    "about": {
+      "tag": "Nuestro Legado",
+      "title": "Liderando la Logística con Precisión y Pasión",
+      "desc": "Fundada sobre los principios de fiabilidad e innovación, Taksh Logistics ha pasado de ser un proveedor de transporte local a una potencia logística global."
+    },
+    "process": {
+      "title": "Nuestro Proceso Integral",
+      "subtitle": "Cómo trabajamos"
+    },
+    "network": {
+      "tag": "Alcance Mundial",
+      "title": "Conectando cada rincón del mundo"
+    },
+    "cta": {
+      "title": "¿Listo para mover su mundo?",
+      "button": "Empezar ahora"
+    }
+  },
+  "Navigation": {
+    "home": "Inicio",
+    "about": "Acerca de",
+    "services": "Servicios",
+    "fleet": "Flota",
+    "tracking": "Seguimiento",
+    "contact": "Contacto"
+  }
+}

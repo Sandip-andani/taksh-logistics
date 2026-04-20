@@ -1,0 +1,63 @@
+{
+  "Index": {
+    "title": "Taksh 物流",
+    "hero": {
+      "slides": [
+        {
+          "headline": "助力全球集装箱贸易",
+          "subtext": "无缝的海运解决方案，以精准和速度连接各大洲。"
+        },
+        {
+          "headline": "运动中的精准",
+          "subtext": "智能公路运输，为每批货物提供实时跟踪。"
+        },
+        {
+          "headline": "自动化物流枢纽",
+          "subtext": "由尖端自动化技术驱动的战略仓储。"
+        }
+      ],
+      "ctaQuote": "获取报价",
+      "ctaTrack": "追踪查询"
+    },
+    "stats": {
+      "deliveries": "1万+ 交付",
+      "clients": "500+ 客户",
+      "support": "24/7 支持"
+    },
+    "services": {
+      "title": "我们的优质服务",
+      "container": "集装箱运输",
+      "freight": "货运代理",
+      "warehousing": "仓储服务",
+      "fleet": "车队管理"
+    },
+    "loader": {
+      "text": "驱动您的世界..."
+    },
+    "about": {
+      "tag": "我们的传承",
+      "title": "以精准与激情引领物流",
+      "desc": "Taksh 物流基于可靠和创新的原则创立，已从一家当地运输供应商成长为全球物流巨头。"
+    },
+    "process": {
+      "title": "我们的无缝流程",
+      "subtitle": "我们如何运作"
+    },
+    "network": {
+      "tag": "遍布全球",
+      "title": "连接世界的每一个角落"
+    },
+    "cta": {
+      "title": "准备好驱动您的世界了吗？",
+      "button": "立即开始"
+    }
+  },
+  "Navigation": {
+    "home": "首页",
+    "about": "关于我们",
+    "services": "服务项目",
+    "fleet": "车队",
+    "tracking": "物流追踪",
+    "contact": "联系我们"
+  }
+}

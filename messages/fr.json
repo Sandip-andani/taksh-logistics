@@ -1,0 +1,63 @@
+{
+  "Index": {
+    "title": "Taksh Logistics",
+    "hero": {
+      "slides": [
+        {
+          "headline": "Propulser le Commerce Mondial de Conteneurs",
+          "subtext": "Solutions de fret maritime fluides reliant les continents avec précision et rapidité."
+        },
+        {
+          "headline": "La Précision en Mouvement",
+          "subtext": "Transport routier intelligent avec suivi en temps réel pour chaque expédition."
+        },
+        {
+          "headline": "Hubs Logistiques Automatisés",
+          "subtext": "Entreposage stratégique propulsé par une technologie d'automatisation de pointe."
+        }
+      ],
+      "ctaQuote": "Obtenir un Devis",
+      "ctaTrack": "Suivre l'expédition"
+    },
+    "stats": {
+      "deliveries": "10K+ Livraisons",
+      "clients": "500+ Clients",
+      "support": "Support 24/7"
+    },
+    "services": {
+      "title": "Nos Services Premium",
+      "container": "Transport de Conteneurs",
+      "freight": "Transitaire",
+      "warehousing": "Entreposage",
+      "fleet": "Gestion de Flotte"
+    },
+    "loader": {
+      "text": "Faire bouger votre monde..."
+    },
+    "about": {
+      "tag": "Notre Héritage",
+      "title": "Pionnier de la Logistique avec Précision et Passion",
+      "desc": "Fondée sur les principes de fiabilité et d'innovation, Taksh Logistics est passée d'un fournisseur de transport local à une puissance logistique mondiale."
+    },
+    "process": {
+      "title": "Notre Processus Fluide",
+      "subtitle": "Comment nous travaillons"
+    },
+    "network": {
+      "tag": "Portée Mondiale",
+      "title": "Connecter chaque coin du globe"
+    },
+    "cta": {
+      "title": "Prêt à faire bouger votre monde ?",
+      "button": "Commencer maintenant"
+    }
+  },
+  "Navigation": {
+    "home": "Accueil",
+    "about": "À propos",
+    "services": "Services",
+    "fleet": "Flotte",
+    "tracking": "Suivi",
+    "contact": "Contact"
+  }
+}

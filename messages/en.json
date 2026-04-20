@@ -1,0 +1,63 @@
+{
+  "Index": {
+    "title": "Taksh Logistics",
+    "hero": {
+      "slides": [
+        {
+          "headline": "Powering Global Container Trade",
+          "subtext": "Seamless sea freight solutions connecting continents with precision and speed."
+        },
+        {
+          "headline": "Precision On The Move",
+          "subtext": "Intelligent road transport with real-time tracking for every single shipment."
+        },
+        {
+          "headline": "Automated Logistics Hubs",
+          "subtext": "Strategic warehousing powered by cutting-edge automation technology."
+        }
+      ],
+      "ctaQuote": "Get Quote",
+      "ctaTrack": "Track Shipment"
+    },
+    "stats": {
+      "deliveries": "10K+ Deliveries",
+      "clients": "500+ Clients",
+      "support": "24/7 Support"
+    },
+    "services": {
+      "title": "Our Premium Services",
+      "container": "Container Transport",
+      "freight": "Freight Forwarding",
+      "warehousing": "Warehousing",
+      "fleet": "Fleet Management"
+    },
+    "loader": {
+      "text": "Moving Your World..."
+    },
+    "about": {
+      "tag": "Our Legacy",
+      "title": "Pioneering Logistics with Precision & Passion",
+      "desc": "Founded on the principles of reliability and innovation, Taksh Logistics has grown from a local transport provider to a global logistics powerhouse."
+    },
+    "process": {
+      "title": "Our Seamless Process",
+      "subtitle": "How We Work"
+    },
+    "network": {
+      "tag": "Worldwide Reach",
+      "title": "Connecting Every Corner of the Globe"
+    },
+    "cta": {
+      "title": "Ready to Move Your World?",
+      "button": "Get Started Now"
+    }
+  },
+  "Navigation": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "fleet": "Fleet",
+    "tracking": "Tracking",
+    "contact": "Contact"
+  }
+}
