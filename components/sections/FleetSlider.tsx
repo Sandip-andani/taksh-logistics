@@ -98,6 +98,7 @@ export const FleetSlider = () => {
                 src={item.img}
                 alt={item.title}
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                 className="object-cover transition-transform duration-1000 group-hover:scale-110 grayscale group-hover:grayscale-0 opacity-60 dark:opacity-40 group-hover:opacity-100"
               />
               

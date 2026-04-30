@@ -71,6 +71,7 @@ export const GlobalNetwork = () => {
               src="/global_map_new.png"
               alt="Global Map"
               fill
+              sizes="100vw"
               className="object-cover grayscale dark:grayscale-0 dark:sepia dark:hue-rotate-[180deg] dark:brightness-110"
             />
           </div>

@@ -94,6 +94,7 @@ export const Services = () => {
                   src={service.img} 
                   alt={service.title} 
                   fill 
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-cover grayscale"
                 />
                 <div className="absolute inset-0 bg-gradient-to-l from-transparent via-white dark:via-gray-900 to-white dark:to-gray-900" />

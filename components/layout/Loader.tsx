@@ -10,17 +10,17 @@ export const Loader = () => {
   const t = useTranslations("Index.loader");
 
   useEffect(() => {
-    // Percentage Counter Logic
+    // Fast counter: completes in ~400ms (step 2 every 8ms)
     const interval = setInterval(() => {
       setCounter((prev) => {
         if (prev >= 100) {
           clearInterval(interval);
-          setTimeout(() => setIsVisible(false), 500);
+          setTimeout(() => setIsVisible(false), 200); // was 500ms
           return 100;
         }
-        return prev + 1;
+        return prev + 2; // was +1
       });
-    }, 20); // Faster for better feel
+    }, 8); // was 20ms
 
     return () => clearInterval(interval);
   }, []);
@@ -31,13 +31,13 @@ export const Loader = () => {
         <motion.div
           className="fixed inset-0 z-[10000] flex items-center justify-center bg-black overflow-hidden"
           exit={{ opacity: 0 }}
-          transition={{ duration: 1, ease: [0.76, 0, 0.24, 1] }}
+          transition={{ duration: 0.5, ease: [0.76, 0, 0.24, 1] }}
         >
           {/* Split Background Animation (Exiting) */}
           <motion.div 
             initial={{ scaleY: 1 }}
             exit={{ scaleY: 0 }}
-            transition={{ duration: 1, ease: [0.76, 0, 0.24, 1] }}
+            transition={{ duration: 0.5, ease: [0.76, 0, 0.24, 1] }}
             className="absolute inset-0 bg-white dark:bg-[#050505] origin-top"
           />
 

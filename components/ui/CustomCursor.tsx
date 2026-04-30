@@ -55,7 +55,7 @@ export const CustomCursor = () => {
       <motion.div
         animate={{
           scale: isHovered ? 1.5 : 1,
-          backgroundColor: isHovered ? "rgba(59, 130, 246, 0.1)" : "transparent",
+          backgroundColor: isHovered ? "rgba(59, 130, 246, 0.1)" : "rgba(59, 130, 246, 0)",
           borderColor: isHovered ? "rgba(59, 130, 246, 0.4)" : "rgba(59, 130, 246, 0.6)",
         }}
         className="h-8 w-8 rounded-full border-2 transition-colors duration-300 backdrop-blur-[1px]"
