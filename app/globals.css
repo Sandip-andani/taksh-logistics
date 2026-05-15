@@ -114,3 +114,40 @@
 ::-webkit-scrollbar-thumb:hover {
   background: var(--muted-foreground);
 }
+
+/* ── Accessibility Panel ──────────────────────────────── */
+html {
+  transition: font-size 0.3s ease;
+}
+
+/* Pause Animations — cuts all motion to 0 */
+[data-no-motion="true"] *,
+[data-no-motion="true"] *::before,
+[data-no-motion="true"] *::after {
+  animation-duration: 0ms !important;
+  animation-delay: 0ms !important;
+  transition-duration: 0ms !important;
+  transition-delay: 0ms !important;
+}
+
+/* Compact Mode — tighter section spacing */
+[data-compact="true"] section {
+  padding-top: 2.5rem !important;
+  padding-bottom: 2.5rem !important;
+}
+[data-compact="true"] .container {
+  gap: 1.5rem !important;
+}
+
+/* Dyslexia Font — high readability typeface */
+[data-dyslexia="true"] body,
+[data-dyslexia="true"] p,
+[data-dyslexia="true"] span,
+[data-dyslexia="true"] li,
+[data-dyslexia="true"] a,
+[data-dyslexia="true"] button {
+  font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+  letter-spacing: 0.04em !important;
+  word-spacing: 0.12em !important;
+  line-height: 1.8 !important;
+}

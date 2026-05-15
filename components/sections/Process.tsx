@@ -36,7 +36,7 @@ export const Process = () => {
   ];
 
   return (
-    <section className="pt-32 pb-10 bg-white dark:bg-[#030303] relative overflow-hidden transition-colors duration-500">
+    <section className="pt-14 pb-10 bg-white dark:bg-[#030303] relative overflow-hidden transition-colors duration-500">
       
       {/* Background Decorative Elements */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none opacity-20 dark:opacity-40">
@@ -47,12 +47,12 @@ export const Process = () => {
       <div className="container mx-auto px-10 md:px-20 lg:px-32 max-w-[1600px] relative z-10">
         
         {/* Editorial Header */}
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-24 gap-12">
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-12 gap-8">
           <div className="max-w-3xl">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
-              className="flex items-center gap-3 mb-6"
+              className="flex items-center gap-3 mb-4"
             >
               <div className="h-[2px] w-10 bg-blue-600" />
               <span className="text-blue-600 font-bold tracking-[0.4em] uppercase text-[10px]">
@@ -60,7 +60,7 @@ export const Process = () => {
               </span>
             </motion.div>
             
-            <h2 className="text-6xl md:text-8xl font-bold font-outfit text-gray-900 dark:text-white tracking-tighter leading-[0.85]">
+            <h2 className="text-4xl md:text-5xl font-bold font-outfit text-gray-900 dark:text-white tracking-tighter leading-[0.9]">
               Optimized <br /> 
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-500">Workflow.</span>
             </h2>
@@ -69,7 +69,7 @@ export const Process = () => {
           <motion.p 
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            className="text-gray-500 dark:text-gray-400 text-lg md:text-xl font-light leading-relaxed max-w-md border-l-2 border-blue-600/10 pl-8"
+            className="text-gray-500 dark:text-gray-400 text-sm md:text-base font-light leading-relaxed max-w-md border-l-2 border-blue-600/10 pl-6"
           >
             {t("desc")}
           </motion.p>
@@ -156,7 +156,7 @@ export const Process = () => {
             className="flex flex-col items-center mb-16 text-center"
           >
             <div className="text-[10px] font-bold text-blue-600 uppercase tracking-[0.4em] mb-4">Performance Intelligence</div>
-            <h3 className="text-3xl md:text-5xl font-bold font-outfit tracking-tight text-gray-900 dark:text-white">Real-time Efficiency Metrics</h3>
+            <h3 className="text-2xl md:text-3xl font-bold font-outfit tracking-tight text-gray-900 dark:text-white">Real-time Efficiency Metrics</h3>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

@@ -16,7 +16,7 @@ export const GlobalNetwork = () => {
   ];
 
   return (
-    <section className="py-16 bg-white dark:bg-[#050505] relative overflow-hidden transition-colors duration-500">
+    <section className="py-12 bg-white dark:bg-[#050505] relative overflow-hidden transition-colors duration-500">
       
       {/* Background Grid & Texture */}
       <div className="absolute inset-0 opacity-10 dark:opacity-20 pointer-events-none">
@@ -26,19 +26,19 @@ export const GlobalNetwork = () => {
       <div className="container mx-auto px-10 md:px-20 lg:px-32 max-w-[1600px] relative z-10">
         
         {/* Top Header */}
-        <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-12 gap-10">
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8 gap-8">
           <div className="max-w-3xl">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
-              className="flex items-center gap-3 mb-6"
+              className="flex items-center gap-3 mb-4"
             >
               <div className="h-[1px] w-10 bg-blue-600" />
               <span className="text-blue-600 font-bold tracking-[0.4em] uppercase text-[10px]">
                 {t("tag")}
               </span>
             </motion.div>
-            <h2 className="text-5xl md:text-7xl font-bold font-outfit text-gray-900 dark:text-white tracking-tighter leading-none">
+            <h2 className="text-4xl md:text-5xl font-bold font-outfit text-gray-900 dark:text-white tracking-tighter leading-none">
               {t("title").split(".")[0]} <br /> 
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-500">
                 {t("title").split(".")[1]}.

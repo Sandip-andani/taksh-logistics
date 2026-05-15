@@ -6,6 +6,7 @@ import { getMessages } from "next-intl/server";
 import { locales } from "@/navigation";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import { CustomCursor } from "@/components/ui/CustomCursor";
+import { AccessibilityPanel } from "@/components/ui/AccessibilityPanel";
 import { Loader } from "@/components/layout/Loader";
 
 const inter = Inter({
@@ -42,6 +43,7 @@ export default async function RootLayout(props: {
           >
             <Loader />
             <CustomCursor />
+            <AccessibilityPanel />
             {props.children}
           </ThemeProvider>
         </NextIntlClientProvider>

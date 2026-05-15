@@ -51,7 +51,7 @@ export const Header = () => {
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
-        className={`w-full max-w-7xl rounded-2xl border transition-all duration-300 flex items-center justify-between px-6 py-3 md:py-2.5 ${
+        className={`w-full max-w-7xl rounded-2xl border transition-all duration-300 flex items-center justify-between px-6 py-2.5 md:py-2.5 ${
           isScrolled
             ? "bg-white/80 dark:bg-black/70 backdrop-blur-xl border-black/5 dark:border-white/10 shadow-2xl shadow-blue-500/10"
             : "bg-white/95 dark:bg-gray-900/95 border-black/5 dark:border-white/10 shadow-lg"
@@ -59,10 +59,10 @@ export const Header = () => {
       >
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-2 shrink-0 group">
-          <div className="h-10 w-10 bg-blue-600 rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-blue-600/30 group-hover:scale-110 transition-transform duration-500">
+          <div className="h-9 w-9 bg-blue-600 rounded-xl flex items-center justify-center text-white font-bold text-base shadow-lg shadow-blue-600/30 group-hover:scale-110 transition-transform duration-500">
             TL
           </div>
-          <span className="text-xl font-bold tracking-tighter font-outfit hidden sm:block text-gray-900 dark:text-white uppercase">
+          <span className="text-lg font-bold tracking-tighter font-outfit hidden sm:block text-gray-900 dark:text-white uppercase">
             TAKSH <span className="text-blue-600">LOGISTICS</span>
           </span>
         </Link>
@@ -73,7 +73,7 @@ export const Header = () => {
             <Link
               key={item.href}
               href={item.href}
-              className={`px-4 py-2 text-sm font-medium rounded-xl transition-all hover:bg-gray-100 dark:hover:bg-white/10 ${
+              className={`px-3.5 py-2 text-sm font-medium rounded-xl transition-all hover:bg-gray-100 dark:hover:bg-white/10 ${
                 pathname === item.href || (item.href === "/" && pathname === "/")
                   ? "text-blue-600 dark:text-blue-400 bg-blue-50/50 dark:bg-blue-400/10"
                   : "text-gray-600 dark:text-gray-400"
@@ -92,7 +92,7 @@ export const Header = () => {
               <Button 
                 variant="ghost" 
                 size="sm" 
-                className="hidden md:flex gap-2 rounded-full h-10 px-4 hover:bg-black/5 dark:hover:bg-white/10 transition-all border border-transparent hover:border-black/5 dark:hover:border-white/10"
+                className="hidden md:flex gap-2 rounded-full h-9 px-4 hover:bg-black/5 dark:hover:bg-white/10 transition-all border border-transparent hover:border-black/5 dark:hover:border-white/10"
               >
                 <Globe className="h-4 w-4 text-blue-600 dark:text-blue-400" />
                 <span className="uppercase text-xs font-bold tracking-widest text-gray-900 dark:text-white">{locale}</span>
@@ -136,7 +136,7 @@ export const Header = () => {
             variant="ghost"
             size="icon"
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-            className="rounded-full h-10 w-10"
+            className="rounded-full h-9 w-9"
           >
             <AnimatePresence mode="wait">
               {theme === "dark" ? (
@@ -152,10 +152,10 @@ export const Header = () => {
           </Button>
 
           <div className="hidden md:flex items-center space-x-2 pl-2 border-l border-gray-100 dark:border-gray-800 ml-2">
-            <Button variant="outline" className="rounded-xl h-10 px-6 border-gray-200 dark:border-gray-800 font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-white/5">
+            <Button variant="outline" className="rounded-xl h-9 px-5 text-sm border-gray-200 dark:border-gray-800 font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-white/5">
               {t("login")}
             </Button>
-            <Button className="rounded-xl h-10 px-6 bg-blue-600 hover:bg-blue-700 text-white font-bold shadow-lg shadow-blue-600/20">
+            <Button className="rounded-xl h-9 px-5 text-sm bg-blue-600 hover:bg-blue-700 text-white font-bold shadow-lg shadow-blue-600/20">
               {t("quote")}
             </Button>
           </div>
@@ -164,7 +164,7 @@ export const Header = () => {
           <div className="lg:hidden">
             <Sheet>
               <SheetTrigger asChild>
-                <Button variant="ghost" size="icon" className="rounded-full h-10 w-10">
+                <Button variant="ghost" size="icon" className="rounded-full h-9 w-9">
                   <Menu className="h-5 w-5" />
                 </Button>
               </SheetTrigger>
@@ -174,7 +174,7 @@ export const Header = () => {
                     <Link
                       key={item.href}
                       href={item.href}
-                      className="text-3xl font-bold font-outfit hover:text-blue-600 transition-colors dark:text-white"
+                      className="text-xl font-bold font-outfit hover:text-blue-600 transition-colors dark:text-white"
                     >
                       {item.label}
                     </Link>
@@ -197,10 +197,10 @@ export const Header = () => {
                     </div>
                   </div>
                   <div className="pt-8 grid grid-cols-2 gap-4">
-                    <Button variant="outline" className="rounded-2xl h-14 text-lg border-gray-200">
+                    <Button variant="outline" className="rounded-2xl h-10 text-sm border-gray-200">
                       {t("login")}
                     </Button>
-                    <Button className="rounded-2xl h-14 text-lg bg-blue-600">
+                    <Button className="rounded-2xl h-10 text-sm bg-blue-600">
                       {t("quote")}
                     </Button>
                   </div>

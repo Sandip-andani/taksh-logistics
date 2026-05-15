@@ -45,16 +45,16 @@ export const Services = () => {
   ];
 
   return (
-    <section className="pt-24 pb-12 bg-gray-50 dark:bg-[#050505] relative overflow-hidden transition-colors duration-500">
+    <section className="pt-14 pb-10 bg-gray-50 dark:bg-[#050505] relative overflow-hidden transition-colors duration-500">
       <div className="container mx-auto px-10 md:px-20 lg:px-32 max-w-[1600px]">
         
         {/* Header - Modular Style */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16 items-end">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-10 items-end">
           <div>
             <motion.div 
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
-              className="flex items-center gap-4 mb-6"
+              className="flex items-center gap-4 mb-4"
             >
               <div className="h-[2px] w-12 bg-blue-600" />
               <span className="text-blue-600 font-bold tracking-[0.3em] uppercase text-[10px]">
@@ -64,7 +64,7 @@ export const Services = () => {
             <motion.h2 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              className="text-5xl md:text-7xl font-bold font-outfit tracking-tighter leading-[0.9] text-gray-900 dark:text-white"
+              className="text-4xl md:text-5xl font-bold font-outfit tracking-tighter leading-[0.9] text-gray-900 dark:text-white"
             >
               {t("mainTitle")} <br /> <span className="text-blue-600">{t("mainSubtitle")}</span>
             </motion.h2>
@@ -72,7 +72,7 @@ export const Services = () => {
           <motion.p 
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            className="text-gray-500 dark:text-gray-400 text-lg md:text-xl font-light leading-relaxed max-w-sm lg:mb-2 border-l border-gray-200 dark:border-white/10 pl-8"
+            className="text-gray-500 dark:text-gray-400 text-sm md:text-base font-light leading-relaxed max-w-sm lg:mb-2 border-l border-gray-200 dark:border-white/10 pl-6"
           >
             {t("mainDesc")}
           </motion.p>

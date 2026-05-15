@@ -49,13 +49,13 @@ export const FleetSlider = () => {
       <div className="container mx-auto px-10 md:px-20 lg:px-32 max-w-[1600px]">
         
         {/* Section Header */}
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-16 gap-8">
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-10 gap-6">
           <div className="max-w-2xl">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="flex items-center gap-3 mb-6"
+              className="flex items-center gap-3 mb-4"
             >
               <div className="h-[1px] w-8 bg-blue-600" />
               <span className="text-blue-600 dark:text-blue-500 font-bold tracking-[0.4em] uppercase text-[10px]">
@@ -67,7 +67,7 @@ export const FleetSlider = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-5xl md:text-7xl font-bold font-outfit text-gray-900 dark:text-white tracking-tighter leading-none"
+              className="text-4xl md:text-5xl font-bold font-outfit text-gray-900 dark:text-white tracking-tighter leading-none"
             >
               {t("title")} <span className="text-blue-600">{t("subtitle")}</span>
             </motion.h2>
@@ -76,7 +76,7 @@ export const FleetSlider = () => {
           <motion.p 
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            className="text-gray-500 dark:text-gray-400 text-lg md:text-xl font-light max-w-sm border-l border-gray-100 dark:border-white/10 pl-8 mb-4"
+            className="text-gray-500 dark:text-gray-400 text-sm md:text-base font-light max-w-sm border-l border-gray-100 dark:border-white/10 pl-6 mb-3"
           >
             {t("desc")}
           </motion.p>
