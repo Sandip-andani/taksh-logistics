@@ -8,6 +8,7 @@ import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import { CustomCursor } from "@/components/ui/CustomCursor";
 import { AccessibilityPanel } from "@/components/ui/AccessibilityPanel";
 import { Loader } from "@/components/layout/Loader";
+import { ScrollProgress } from "@/components/ui/ScrollProgress";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -41,6 +42,7 @@ export default async function RootLayout(props: {
             enableSystem
             disableTransitionOnChange
           >
+            <ScrollProgress />
             <Loader />
             <CustomCursor />
             <AccessibilityPanel />
